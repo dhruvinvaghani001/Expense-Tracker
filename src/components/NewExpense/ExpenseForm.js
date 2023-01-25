@@ -19,6 +19,11 @@ const ExpenseForm = (props) => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
+
+    if(enterTitle.length==0 || enterDate.length==0 || enterAmount.length==0){
+      alert("please enter valid input feild ");
+      
+    }
     const data = {
       title: enterTitle,
       price: enterAmount,
